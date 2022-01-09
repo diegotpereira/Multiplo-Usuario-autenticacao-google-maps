@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:text="login"
+                android:text="Entrar"
                 android:textColor="#ffffff"
                 android:gravity="center"/>
 
@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:hint="Password"
+                    android:hint="Senha"
                     android:inputType="textWebPassword"
                     android:background="@drawable/draw2"
                     android:textColorHint="#ffffff"
@@ -85,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:text="Don't Have An Account? Register."
+                android:text="Não tem uma conta? Cadastre-se."
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:textColor="#ffffff"

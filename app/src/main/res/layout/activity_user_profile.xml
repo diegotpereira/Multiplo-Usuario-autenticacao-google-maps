@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:text="Welcome"
+        android:text="Bem vindo"
         android:gravity="center"
         android:id="@+id/welcome"
         >
@@ -23,7 +23,7 @@
     </TextView>
     <Button
         android:layout_width="match_parent"
-        android:text="Add detail"
+        android:text="Adicionar detalhes"
         android:id="@+id/btn1"
         android:layout_marginTop="100dp"
         android:layout_height="60dp">
