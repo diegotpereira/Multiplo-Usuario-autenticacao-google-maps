@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "103953012030",
+    "project_id": "projetos-android-1c28e",
+    "storage_bucket": "projetos-android-1c28e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103953012030:android:698b16df34b806cb00086f",
+        "android_client_info": {
+          "package_name": "com.example.multiplo_usuario_autenticacao_google_maps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103953012030-37c8339cuefllp1nb5v8ch53f4hnj6jh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUj0HPXT0cozTf3zPtMQxboMpQ-WI5cFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103953012030-37c8339cuefllp1nb5v8ch53f4hnj6jh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -31,22 +31,28 @@ public class registration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
+        // Chamada dos Componentes
         name = findViewById(R.id.name);
         reg_email = findViewById(R.id.email_reg);
         reg_password = findViewById(R.id.password_reg);
         reg_re_password = findViewById(R.id.rePassword);
         btn1 = findViewById(R.id.login_reg);
 
+        // Chamada no firbase
+
         auth =  FirebaseAuth.getInstance();
         dataRef = FirebaseDatabase.getInstance().getReference();
 
+        // Botão de cadastro
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // busca campo tempo
                 String email = reg_email.getText().toString();
                 final String nam = name.getText().toString();
                 String password = reg_password.getText().toString();
 
+                // Teste se o campo é vazio
                 if (TextUtils.isEmpty(email)) {
                     reg_email.setError("Requirido");
                     reg_email.requestFocus();
