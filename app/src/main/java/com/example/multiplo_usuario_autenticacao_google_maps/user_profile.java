@@ -1,5 +1,6 @@
 package com.example.multiplo_usuario_autenticacao_google_maps;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,11 +13,21 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class user_profile extends AppCompatActivity {
 
     Button btn1;
     TextView welcome;
     ImageView img1;
+
+    FirebaseAuth auth;
+    DatabaseReference dataRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +37,9 @@ public class user_profile extends AppCompatActivity {
         btn1 = findViewById(R.id.btn1);
         welcome =  findViewById(R.id.welcome);
         img1 = findViewById(R.id.img1);
+
+        auth = FirebaseAuth.getInstance();
+        dataRef = FirebaseDatabase.getInstance().getReference();
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +54,9 @@ public class user_profile extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
                         String newInfo = et.getText().toString();
+                        String uid =  auth.getCurrentUser().getUid();
 
+                        dataRef.child(uid).setValue(welcome.getText().toString() + "\n" + newInfo);
                     }
                 });
                 ad.show();
@@ -51,12 +67,38 @@ public class user_profile extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        auth.signOut();
         startActivity(new Intent(user_profile.this, login.class));
         finish();
     }
 
     @Override
     protected void onStart() {
+
         super.onStart();
+        auth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if (firebaseAuth.getCurrentUser() != null) {
+
+                    exibirDetalhes();
+                }
+            }
+        });
+    }
+    private void exibirDetalhes() {
+        dataRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                DataSnapshot currenteChild = snapshot.child(auth.getCurrentUser().getUid());
+                String getInfo = currenteChild.getValue(String.class);
+                welcome.setText("\n" + getInfo);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

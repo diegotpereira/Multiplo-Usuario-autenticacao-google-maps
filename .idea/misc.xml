@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/diego/AndroidStudioProjects/MultiploUsuarioautenticacaogooglemaps/app/src/main/res/layout/activity_login.xml" value="0.536" />
-        <entry key="..\:/Users/diego/AndroidStudioProjects/MultiploUsuarioautenticacaogooglemaps/app/src/main/res/layout/activity_maps.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/diego/AndroidStudioProjects/MultiploUsuarioautenticacaogooglemaps/app/src/main/res/layout/activity_main.xml" value="0.16304347826086957" />
+        <entry key="..\:/Users/diego/AndroidStudioProjects/MultiploUsuarioautenticacaogooglemaps/app/src/main/res/layout/activity_maps.xml" value="0.433392539964476" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/MultiploUsuarioautenticacaogooglemaps/app/src/main/res/layout/activity_registration.xml" value="0.4" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/MultiploUsuarioautenticacaogooglemaps/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
-        <entry key="..\:/Users/diego/AndroidStudioProjects/MultiploUsuarioautenticacaogooglemaps/app/src/main/res/layout/my_layout.xml" value="0.1" />
+        <entry key="..\:/Users/diego/AndroidStudioProjects/MultiploUsuarioautenticacaogooglemaps/app/src/main/res/layout/my_layout.xml" value="0.4" />
       </map>
     </option>
   </component>

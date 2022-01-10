@@ -12,6 +12,7 @@
         android:layout_height="400dp">
 
     </ImageView>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -21,12 +22,13 @@
         >
 
     </TextView>
+
     <Button
-        android:layout_width="match_parent"
-        android:text="Adicionar detalhes"
         android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_marginTop="100dp"
-        android:layout_height="60dp">
+        android:text="Adicionar detalhes">
 
     </Button>
 </LinearLayout>
